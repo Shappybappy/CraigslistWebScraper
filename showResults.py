@@ -1,5 +1,5 @@
 #showResults.py
-from Results import totalPosts, results
+from Results import total_posts, results
 
 def showResultsPlease():
-    results(totalPosts)
+    results(total_posts)
