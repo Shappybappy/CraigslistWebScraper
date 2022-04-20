@@ -6,6 +6,7 @@ from SpecifySearch import SEARCH_ITEM
 
 
 def results(post):
+    checkIfPrintedPostAmount = 0
     for i, post in enumerate(totalPosts):
         titleDiv = post.find('a', class_='result-title')
         postTitle = titleDiv.get_text()
@@ -13,8 +14,9 @@ def results(post):
         postTimeText = post.find('time').get('datetime')
         postTime = datetime.strptime(postTimeText, '%Y-%m-%d %H:%M')
         ellaspedMins = (datetime.now() - postTime)
-
-        print(f'{len(totalPosts)} results containg "{SEARCH_ITEM}"')
+        
+        if checkIfPrintedPostAmount < 1:
+            print(f'{len(totalPosts)} results containg "{SEARCH_ITEM}"')
         print(f'{i+1}: {postTitle} -- {ellaspedMins} ++ {postURL} ||||')
 
 totalPosts = stepThroughPages([], '/search/zip?')
