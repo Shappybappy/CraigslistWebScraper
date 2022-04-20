@@ -9,4 +9,4 @@ A fun project to learn some python/html and tkinter
 2. Web Scraping is against Craigslist TOS so dont get angry at me if you get banned.
 
 # Notice
-This project is not done, and is subject to change. If you wish to currently run this project download each python file except for `GUI.py` and inside of the file, `SpecifySearch.py`, change `SEARCH_ITEM` to `input()`
+This project is not done, and is subject to change. If you wish to currently run this project download each python file except for `GUI.py`, and inside of the file, `SpecifySearch.py`, change `SEARCH_ITEM` to `input()`
