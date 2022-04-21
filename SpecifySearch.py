@@ -1,7 +1,10 @@
 #SpecifySearch.py
+from GUI import myClick
 
-SEARCH_ITEM = None
+SEARCH_ITEM = ""
 
-def searchSpec(spec):
+def setSearchItem(item):
     global SEARCH_ITEM
-    SEARCH_ITEM = spec 
+    SEARCH_ITEM = item
+
+setSearchItem(myClick())    
