@@ -17,7 +17,7 @@ entryTK = tk.Entry(root, width=30)
 def myClick():
     label= tk.Label(root, text=entryTK.get())
     label.pack()
-    return entryTK.get()
+    return label.cget("text")
 
 def close():
     root.destroy()
@@ -33,3 +33,4 @@ button2.pack()
 entryTK.pack()
 
 root.mainloop()
+
