@@ -1,4 +1,5 @@
 #GUI.py
+import time
 import tkinter as tk
 
 
@@ -18,8 +19,13 @@ def myClick():
     label.pack()
     return entryTK.get()
 
+def close():
+    root.destroy()
+    time.sleep(10)
+    print("closed")    
+
 button1 = tk.Button(frame1, text="button", command=myClick)
-button2 = tk.Button(frame1, text="done", command=root.destroy)
+button2 = tk.Button(frame1, text="done", command=close)
 
 canvas.pack()
 button1.pack()
