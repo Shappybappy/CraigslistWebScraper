@@ -3,7 +3,6 @@ import tkinter as tk
 
 from Results import results
 
-
 root = tk.Tk()
 root.title("Craigslist scraper")
 
@@ -20,6 +19,11 @@ def myClick():
 def displayOutput():
     display_label = tk.Label(root, text=myClick()) 
     display_label.pack()
+
+    textVar = tk.StringVar()
+    textVar.set(' '.join(link for link in myClick().split(' ') if link.startswith('https')))
+    output_entry = tk.Entry(root, state="readonly", textvariable=textVar, width=100)
+    output_entry.pack()
 
 def close():
     root.destroy()
