@@ -3,7 +3,6 @@ import datetime
 from datetime import datetime
 from StepThroughPages import stepThroughPages
 
-
 def results(SEARCH_ITEM):
     check = 0
     total_posts = stepThroughPages([], '/search/zip?')
@@ -22,6 +21,6 @@ def results(SEARCH_ITEM):
             global actualResults
             actualResults = f'{len(total_posts)} results containg "{SEARCH_ITEM}"\n'
 
-        actualResults = actualResults + f'{i+1}: {post_title} -- {ellasped_mins} ++ {post_URL} ||||\n'
+        actualResults = actualResults + f'{i+1}: {post_title} -- {ellasped_mins} -- {post_URL} \n'
 
     return actualResults
