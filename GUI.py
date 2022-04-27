@@ -1,5 +1,4 @@
 #GUI.py
-from time import time
 import tkinter as tk
 
 from Results import results
@@ -7,7 +6,7 @@ from Results import results
 root = tk.Tk()
 root.title("Craigslist scraper")
 
-canvas = tk.Canvas(root, height=700, width=1200, bg="#5cbfd6")
+canvas = tk.Canvas(root, height=450, width=790, bg="#5cbfd6")
 canvas.pack()
 
 frame1 = tk.Frame(canvas, bg="gray")
@@ -30,7 +29,7 @@ def displayOutput():
     global display_label
     global output_entry
 
-    display_label = tk.Label(root, text=myClick(), font=("Helvetica", 11))
+    display_label = tk.Label(root, text=myClick(), font=("Helvetica", 9))
     display_label.pack()
 
     textVar = tk.StringVar()
