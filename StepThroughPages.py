@@ -5,7 +5,7 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 
 
-DRIVER_PATH = "C:\\Users\\rmrey\\shitty apps\\ChromeDriver\\chromedriver.exe"
+DRIVER_PATH = "your driver path"
 baseURL = 'https://kansascity.craigslist.org'
 
 options = Options()
